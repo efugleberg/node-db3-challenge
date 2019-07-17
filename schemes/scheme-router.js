@@ -77,6 +77,7 @@ router.post('/:id/steps', async (req, res) => {
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
   const changes = req.body;
+  console.log(changes);
 
   try {
     const scheme = await Schemes.findById(id);
